@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="ru"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>90 дней до «Вот это да!»</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,17 +99,22 @@ section{padding-block:clamp(54px,7vw,104px)}
 .topnav a:hover{opacity:1}
 .brand{text-align:center;font-family:var(--f-display);font-size:1.05rem;letter-spacing:.34em;text-transform:uppercase;text-decoration:none;line-height:1.4}
 .brand small{display:block;font-family:var(--f-ui);font-size:.5rem;letter-spacing:.38em;opacity:.7;margin-top:2px}
-.topbar__cta{justify-self:end}
+.topbar__end{justify-self:end;display:flex;align-items:center;gap:22px}
+.lang{display:flex;align-items:center;gap:7px;font-family:var(--f-ui);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase}
+.lang a{text-decoration:none;opacity:.62;transition:opacity .25s}
+.lang a:hover{opacity:1}
+.lang__sep{opacity:.45}
 @media (max-width:860px){
   .topnav{display:none}
   .topbar__in{grid-template-columns:1fr auto 1fr}
   .topbar .brand{grid-column:2}
-  .topbar .topbar__cta{grid-column:3}
+  .topbar .topbar__end{grid-column:3}
 }
 @media (max-width:560px){
   .topbar .topbar__cta{display:none}
-  .topbar__in{grid-template-columns:1fr}
-  .topbar .brand{grid-column:1}
+  .topbar__in{grid-template-columns:1fr auto}
+  .topbar .brand{grid-column:1;text-align:left}
+  .topbar .topbar__end{grid-column:2}
 }
 
 /* ——— кнопки ——— */
@@ -413,7 +418,10 @@ html{scroll-behavior:smooth}
     </nav>
     <a class="brand" href="#top">Karina<small>Dubai</small></a>
     <!-- ЗАМЕНИТЬ ССЫЛКУ -->
-    <a class="btn topbar__cta" href="#svyaz" style="border-color:currentColor">Связаться</a>
+    <div class="topbar__end">
+      <span class="lang"><span aria-current="page">RU</span><span class="lang__sep" aria-hidden="true">/</span><a href="en.html" lang="en" hreflang="en">EN</a></span>
+      <a class="btn topbar__cta" href="#svyaz" style="border-color:currentColor">Связаться</a>
+    </div>
   </div>
 </header>
 
@@ -475,7 +483,7 @@ html{scroll-behavior:smooth}
           <h3>Результат</h3>
           <p>Образ жизни, который остаётся с вами и после девяностого дня.</p>
           <h3>Образование</h3>
-          <p>Yoga Alliance (RYT 200), BASI Pilates, Z-Health.</p>
+          <p>Yoga Alliance (RYT 200), BASI Pilates, Z-Health, Лига нутрициологии.</p>
         </div>
       </aside>
     </div>
